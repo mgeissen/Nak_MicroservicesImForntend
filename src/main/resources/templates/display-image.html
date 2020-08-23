@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Viewer</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+
+    <img th:src="${imageUrl}" th:style="'transform: rotate(' + ${rotate} + 'deg);'">
+
+</body>
+</html>
