@@ -1,1 +1,1 @@
-# Nak_MicroservicesImForntend
+## Beispielprojekt für das Seminar "Microservices im Frontend"
