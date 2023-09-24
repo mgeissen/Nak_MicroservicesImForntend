@@ -85,10 +85,51 @@ and contact details about this seminar.
             flex-direction: column;
             gap: 8px;
         }
+
         .server-info-item {
             display: flex;
             flex-direction: row;
             gap: 8px;
+        }
+
+        .bookmarks {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .bookmark-item {
+            color: black;
+        }
+
+        .bookmark-item:hover {
+            color: grey;
+        }
+
+        .separator {
+            width: 70%;
+            border-top: 1px solid #cdcdcd;
+            margin-top: 16px;
+        }
+
+        .commands {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .command {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+        }
+
+        code {
+            background: #bfbfbf;
+            padding: 4px;
+            border-radius: 5px;
         }
     </style>
 
@@ -111,6 +152,28 @@ and contact details about this seminar.
 
 </div>
 
+<div class="separator"></div>
+
+<div class="subheadline">Important Links</div>
+<div class="bookmarks">
+    <a class="bookmark-item" href="https://mordakademie.de/statuschecker/">Statuschecker</a>
+    <a class="bookmark-item" href="https://mordakademie.de/widgets/swagger-ui.html">Widget Dokumentation</a>
+</div>
+
+<div class="separator"></div>
+
+<div class="subheadline">Important Commands</div>
+
+<div class="commands">
+    <div class="command">
+        <div>Start localtunnel</div>
+        <div><code>lt --port 9000 -h http://mordakademie.de:9999 -s teamName</code></div>
+    </div>
+
+</div>
+
+<div class="separator"></div>
+
 <div class="subheadline">Your seminar hosts</div>
 <div class="contact">
     <div class="contact-row">
@@ -123,7 +186,8 @@ and contact details about this seminar.
                 Kontaktieren</a>
             <a class="contact-link" target="_blank"
                href="https://www.linkedin.com/in/adrian-stoelken/">
-                <img class="social-icon" style="width: 20px;padding: 0 6px;" th:src="'data:image/png;base64, ' + ${linkedInIconBase64}">
+                <img class="social-icon" style="width: 20px;padding: 0 6px;"
+                     th:src="'data:image/png;base64, ' + ${linkedInIconBase64}">
                 Vernetzen</a></div>
     </div>
     <div class="contact-row">
@@ -136,7 +200,8 @@ and contact details about this seminar.
                 Kontaktieren</a>
             <a class="contact-link" target="_blank"
                href="https://www.linkedin.com/in/matthias-gei%C3%9Fend%C3%B6rfer/">
-                <img class="social-icon" style="width: 20px;padding: 0 6px;" th:src="'data:image/png;base64, ' + ${linkedInIconBase64}">
+                <img class="social-icon" style="width: 20px;padding: 0 6px;"
+                     th:src="'data:image/png;base64, ' + ${linkedInIconBase64}">
                 Vernetzen</a></div>
     </div>
 </div>
