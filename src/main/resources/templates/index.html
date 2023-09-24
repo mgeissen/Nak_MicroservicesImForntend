@@ -1,0 +1,145 @@
+<!--
+You should not touch this file. It is just for providing some general debug information
+and contact details about this seminar.
+-->
+
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MicroFrontends</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@300;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #e4e4e4;
+        }
+
+        .subheadline {
+            padding: 16px 0;
+            font-size: 20px;
+        }
+
+        .contact {
+            display: flex;
+            gap: 16px;
+            flex-direction: column;
+        }
+
+        .contact-row {
+            display: flex;
+            justify-content: start;
+            flex-direction: row;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .contact-image {
+            width: 100px;
+            border-radius: 5px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            align-items: stretch;
+            width: 180px;
+        }
+
+        .contact-name {
+            font-weight: bold;
+        }
+
+        .contact-link {
+            color: white;
+            text-decoration: none;
+            background: #ff6a6a;
+            padding: 8px;
+            display: flex;
+            border-radius: 5px;
+            gap: 8px;
+            height: 20px;
+        }
+
+        .contact-link:hover {
+            background: rgba(255, 106, 106, 0.68);
+        }
+
+        .social-icon {
+            width: 32px;
+        }
+
+        .server-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .server-info-item {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+        }
+    </style>
+
+</head>
+<body>
+
+<h2>Welcome to Microservices: Einführung zu Micro Frontends</h2>
+
+<div class="subheadline">Service Info</div>
+
+<div class="server-info">
+    <div class="server-info-item">
+        <div>Context Path:</div>
+        <div th:text="${contextPath}"></div>
+    </div>
+    <div class="server-info-item">
+        <div>Local Port:</div>
+        <div th:text="${localPort}"></div>
+    </div>
+
+</div>
+
+<div class="subheadline">Your seminar hosts</div>
+<div class="contact">
+    <div class="contact-row">
+        <div><img class="contact-image" th:src="'data:image/png;base64, ' + ${adrianBase64}"></div>
+        <div class="contact-details">
+            <div class="contact-name">Adrian Stölken</div>
+            <a class="contact-link" target="_blank"
+               href="https://teams.microsoft.com/l/chat/0/0?tenantId=ecac8b87-ceb1-4860-861b-b0f206ca5ce3&users=stoelken@nordakademie.de">
+                <img class="social-icon" th:src="'data:image/png;base64, ' + ${teamsIconBase64}">
+                Kontaktieren</a>
+            <a class="contact-link" target="_blank"
+               href="https://www.linkedin.com/in/adrian-stoelken/">
+                <img class="social-icon" style="width: 20px;padding: 0 6px;" th:src="'data:image/png;base64, ' + ${linkedInIconBase64}">
+                Vernetzen</a></div>
+    </div>
+    <div class="contact-row">
+        <div><img class="contact-image" th:src="'data:image/png;base64, ' + ${matthiasBase64}"></div>
+        <div class="contact-details">
+            <div class="contact-name">Matthias Geißendörfer</div>
+            <a class="contact-link" target="_blank"
+               href="https://teams.microsoft.com/l/chat/0/0?tenantId=ecac8b87-ceb1-4860-861b-b0f206ca5ce3&users=geissendoerfer@nordakademie.de">
+                <img class="social-icon" th:src="'data:image/png;base64, ' + ${teamsIconBase64}">
+                Kontaktieren</a>
+            <a class="contact-link" target="_blank"
+               href="https://www.linkedin.com/in/matthias-gei%C3%9Fend%C3%B6rfer/">
+                <img class="social-icon" style="width: 20px;padding: 0 6px;" th:src="'data:image/png;base64, ' + ${linkedInIconBase64}">
+                Vernetzen</a></div>
+    </div>
+</div>
+
+</body>
+</html>
